@@ -1,6 +1,4 @@
-config.ini
 *.db
 .venv/
-*.log
 .env
  
