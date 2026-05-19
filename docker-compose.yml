@@ -1,8 +1,5 @@
 services:
   bot:
-    image : python:3.12-slim
-    working_dir: /bot_dir
-    container_name: bot
-    volumes:
-      - ./bot_dir:/bot_dir
-    command: sh -c "pip install --upgrade pip && pip install -r requirements.txt && python3 bot.py"
+    build:
+      context: ./bot_dir
+      dockerfile: Dockerfile
